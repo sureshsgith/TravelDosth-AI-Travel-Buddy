@@ -1,0 +1,5 @@
+steps:
+  - name: Set up Google Cloud credentials
+    run: echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}' | python -c 'import json; import sys; print(json.dumps(json.loads(sys.stdin.read()), indent=2))' > gcloud.json
+    env:
+      GOOGLE_APPLICATION_CREDENTIALS: './gcloud.json'
