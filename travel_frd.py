@@ -6,7 +6,7 @@ from google.cloud.vision_v1 import types
 from tempfile import NamedTemporaryFile
 import pandas as pd
 
-os.environ['GOOGLE_APPLICATION_CREDENTIALS']
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = './gcloud.json'
 import langchain 
 langchain.debug=True
 
